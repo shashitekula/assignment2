@@ -55,8 +55,19 @@ defmodule Ex03 do
 
   """
 
-  def odd_even . . . "your code"
+   def odd_even([head|tail]) do
 
+      if(Integer.is_odd(head)) do
+        :odd = [head] 
+       odd_even([tail])
+
+      else
+      :even = [head]
+      odd_even([tail])
+
+      end
+
+  end
 
   ##############################################################################
   # 3.2:  5 points #
@@ -77,7 +88,11 @@ defmodule Ex03 do
 
   """
 
-  def list_contains . .. "your code"
+  def list_contains([head | tail],containsValue) when head == containsValue do
+      list_contains([tail],containsValue) 
+    end
+
+
 
   ##############################################################################
   # 3.3:  5 points #
